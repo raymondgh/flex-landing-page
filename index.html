@@ -2,12 +2,17 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
-	<title>Leasey - Apartment Rental Applications Made Easy.</title>
+	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div id="container">
-  	<div id="row-1">LEASEY
+  	<div id="row-1">
+  		<div id="header-left">
+  			<div id="header-name">Leasetogether</div>
+  			<div id="header-slogan">The easiest way to apply for an apartment lease.</div>
+  		</div>
+  		<div id="header-right">Landlord</div>
   	</div>
   	<div id="row-2">
   		<div id="row-2-content">
@@ -33,7 +38,7 @@
   				<div class="step"><img src="images/envelope132.png" style="height:64px"> 
   					<div class="step-text">
   						<div class="step-title">Submit Application</div>
-  						<div class="step-description">Press a button and Leasey prints and mails your application overnight!</div>
+  						<div class="step-description">With one click, Leasetogether prints and delivers your application overnight!</div>
   					</div>
   				</div>
   			</div>
@@ -109,13 +114,35 @@ body {
 	flex-direction: row;
 	width: 100%;
 	height: 50px;
-	color: #ccc;
+	color: #aaa;
 	align-items: center;
-	justify-content: center;
-	font-size: 1.275rem;
-	background-color: #1b1d24;
+	justify-content: space-around;
+	background-color: #fff;
+	border-bottom: 1px solid #0ec9e3;
 
 }
+
+#header-left {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+
+}
+#header-name {
+	color: #0ec9e3;
+	font-size: 1.25rem;
+	padding-right: 2%;
+}
+
+#header-slogan {
+	font-style:italic;
+	font-size:0.9rem;
+}
+
+#header-right {
+
+}
+
 
 #row-2 {
 	display: flex;
@@ -135,6 +162,7 @@ body {
 	flex-direction: column;
 	background-color: hsla(180, 0%, 90%, 0);
 	width:570px;
+	min-width:515px;
 	height:75%;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -177,11 +205,14 @@ body {
 
 .step {
 	display:flex;
-	background-color: hsla(180, 0%, 100%, 0.80);
+	background-color: hsla(180, 0%, 100%, 0.9);
 	vertical-align: center;
 	border-radius: 5px;
 	justify-content: space-between;
 	padding: 1% 2% 1% 2%;
+	-webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 
 }
 
