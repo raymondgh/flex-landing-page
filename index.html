@@ -4,15 +4,18 @@
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
 	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
   <div id="container">
   	<div id="row-1">
   		<div id="header-left">
+  			<div id="header-logo"><img src="images/logo.png" style="width:30px;height:auto"></div>
   			<div id="header-name">Leasetogether</div>
   			<div id="header-slogan">The easiest way to apply for an apartment lease.</div>
   		</div>
-  		<div id="header-right">Landlord</div>
+  		<div id="header-right"><a href="https://twitter.com/leasetogether" target="_blank">Twitter</a></div>
   	</div>
   	<div id="row-2">
   		<div id="row-2-content">
@@ -42,9 +45,6 @@
   					</div>
   				</div>
   			</div>
-
-
-
 
 			<div id="mc_embed_signup">
 				<form 	action="http://github.us12.list-manage.com/subscribe/post?u=aea7ecd7ff89135c58f60a06f&amp;id=cd99dbfa77" 
@@ -81,256 +81,12 @@
 		</div>
 	</div>
  </div>
- 	<div id="row-3"></div>
+<!--  	<div id="row-3"></div>
  	<div id="row-4">
 		<div id="green"></div>
 	    <div id="blue"></div>
 	    <div id="orange"></div>
 	    <div id="black"></div>
 	    <div id="yellow"></div>
-	</div>
-
+	</div> -->
 </body>
-
-<style>
-
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 100%;
-}
-
-#container {
-	display: flex;
-	flex-direction: column;
-	background-color:white;
-	width:100%;
-	height:100vh;
-}
-
-#row-1 {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 50px;
-	color: #aaa;
-	align-items: center;
-	justify-content: space-around;
-	background-color: #fff;
-	border-bottom: 1px solid #0ec9e3;
-
-}
-
-#header-left {
-	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-
-}
-#header-name {
-	color: #0ec9e3;
-	font-size: 1.25rem;
-	padding-right: 2%;
-}
-
-#header-slogan {
-	font-style:italic;
-	font-size:0.9rem;
-}
-
-#header-right {
-
-}
-
-
-#row-2 {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background: url(images/boston.jpg) top center;
-	background-size: cover;
-	width: 100%;
-	height: 100vh;
-}
-
-
-
-#row-2-content {
-	display: flex;
-	flex-direction: column;
-	background-color: hsla(180, 0%, 90%, 0);
-	width:570px;
-	min-width:515px;
-	height:75%;
-	margin-left: 5%;
-	margin-right: 5%;
-	align-items: center;
-	justify-content: space-between;
-	max-height: 600px
-}
-
-#title-and-subtitle {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0px 0px 5px 0px;
-}
-#title {
-    text-transform: uppercase;
-	font-family: josefin sans;
-	font-size: 36px;
-	font-weight: bolder;
-}
-
-#subtitle {
-	font-family: josefin sans;
-	font-size: 20px;
-	font-weight: bolder;
-	text-transform: uppercase;
-}
-
-#how-it-works {
-	display:flex;
-	flex-direction: column;
-	justify-content: space-between;
-	font-size: 24px;
-	background-color: hsla(180, 0%, 100%, 0);
-	width: 75%;
-	height: 50%;
-	border-radius: 5px;
-	min-height: 265px;
-}
-
-.step {
-	display:flex;
-	background-color: hsla(180, 0%, 100%, 0.9);
-	vertical-align: center;
-	border-radius: 5px;
-	justify-content: space-between;
-	padding: 1% 2% 1% 2%;
-	-webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
-
-}
-
-.step-text {
-	display:flex;
-	flex-direction:column;
-	padding: 0% 2% 0% 2%;
-}
-.step-title {
-
-}
-
-.step-description {
-	font-size: 16px;
-}
-
-#mc_embed_signup {
-	width: 100%;
-}
-
-
-#mc-embedded-subscribe-form {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	padding: 5px 0px 0px 0px;
-
-}
-
-#mc-form-and-button {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 100%;
-}
-
-#mc-email {
-
-    background-color: #FFF;
-    border: 0;
-    border-radius: 3px;
-    color: #8f9091;
-    height: 50px;
-    font-size: 14px;
-    letter-spacing: .04em;
-    outline: none;
-    padding-left: 20px;
-    width: 340px;
-    float:left;
-}
-
-#mc-button {
-	border-radius: 3px;
-    background-color: #0ec9e3;
-    border: 0px solid #0ec9e3;
-    color: #FFF;
-    height: 50px;
-    font-size: 14px;
-    letter-spacing: .08em;
-    line-height: 12px;
-    padding: 19px 25px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: background-color .2s;
-    cursor: pointer;
-}
-
-#mc-button:hover{
-	background-color: #06869d;
-}
-
-#row-3 {
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 80px;
-	background-color: #1b1d24;
-}
-
-
-#row-4 {
-	display: flex;
-	flex-direction: row;
-	background-color: red;
-	width: 100%;
-	height: 100vh;
-}
-
-#green {
-	background-color:green;
-	width:20%;
-	height:20%;
-}
-
-#blue {
-	background-color:blue;
-	width:20%;
-	height:20%;
-}
-
-#orange {
-	background-color:orange;
-	width:20%;
-	height:20%;
-}
-
-#black {
-	background-color:black;
-	width:20%;
-	height:20%;
-}
-
-#yellow	{
-	background-color:yellow;
-	width:20%;
-	height:20%;
-}
-
-</style>
-
