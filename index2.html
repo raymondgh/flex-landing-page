@@ -89,8 +89,9 @@
     
 <!-- BEGIN TRACY EDIT : REMOVE ALL IN THIS AREA AND YOU'LL BE BACK TO NORMAL -->
 <!-- Why do I not use external css, you ask? good question -->
-    
-<div class="row" style="padding:40px;text-align:center;height:300px;">
+   
+<!--    Here be a row of features w/ icons     -->
+ <div class="row" style="padding:40px;text-align:center;height:300px;">
     <div class="col-sm-3">
         <img src="/Users/Tracy/Desktop/paperless.png" style="width:60px;height:60px;">
         <h4> Paperless </h4>
@@ -115,6 +116,74 @@
         <p> Sign up, upload your documents, fill in your information, and you're done! Your lease paperwork will be on its way. No hassle, just easy leasing. ETC </p>
     </div> 
 </div>
+<!--    Here ends a row of features w/ icons   
+
+
+
+  and now I will show you how to do the same thing with flexbox. no javascript, just a few lines of CSS
+  -->
+
+  <div id="row-of-features">
+    <div class="feature-block">
+      <img src="/Users/Tracy/Desktop/paperless.png">
+      <h4>Paperless</h4>
+      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
+    </div>
+    <div class="feature-block">
+      <img src="/Users/Tracy/Desktop/paperless.png">
+      <h4>Paperless</h4>
+      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
+    </div>
+    <div class="feature-block">
+      <img src="/Users/Tracy/Desktop/paperless.png">
+      <h4>Paperless</h4>
+      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
+    </div>
+    <div class="feature-block">
+      <img src="/Users/Tracy/Desktop/paperless.png">
+      <h4>Paperless</h4>
+      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
+    </div>
+  </div>
+
+<!-- here's that flexbox stylin' -->
+
+  <style>
+  #row-of-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px;
+  }
+  .feature-block {
+    width: 25%;
+    min-width: 180px;
+    max-width: 360px;
+    text-align: center;
+    padding: 15px;
+  }
+</style>
+
+<!-- the #row-of-features div acts as a container row, while the .feature-block 's act as items in the row
+
+  display:flex                      // turns on the flexbox functionality
+  flex-direction: row              // indicates this is horizontal container, not vertical
+  justify-content: space-around    // spaces out the items inside the flexbox
+  flex-wrap: wrap                  // allows items to be put on additional rows when the first row isn't long enough
+
+  in .feature-block, there are some things that can be changed. 
+
+  i set the width to 25%. this relates to its direct parent, #row-of-features, which is set to 100% width of the browser
+  - the 25% does include the padding
+  
+  since it's % based, it could potentially be super wide or super narrow. so we can use a min-width and max-width to prevent that.
+  it works really well.
+
+ -->
+
+
     
 <div class="row" style="padding:40px; background-image:url(/Users/Tracy/Desktop/SF.jpeg); height:400px; background-repeat:no-repeat; background-size:cover;">
     <div class="col-sm-8">
