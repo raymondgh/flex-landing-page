@@ -4,16 +4,9 @@
 	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <meta name="viewport" content="height=device-height, width=device-width, user-scalable=no">
+        <link rel="shortcut icon" href="favicon.ico">
 
-<!-- BOOTSTRAP ETC [didn't use flex] -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- END BOOTSTRAP DUMP-->
 </head>
-
 <body>
   <div id="container">
   	<div id="row-1">
@@ -89,25 +82,28 @@
 	</div>
  </div>
     
+<!--    Here ends a row of features w/ icons   
+  and now I will show you how to do the same thing with flexbox. no javascript, just a few lines of CSS
+  -->
 
   <div id="row-of-features">
     <div class="feature-block">
-      <img src="/Users/Tracy/Desktop/paperless.png">
+      <img src="images/paperless.png">
       <h4>Paperless</h4>
       <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
     </div>
     <div class="feature-block">
-      <img src="/Users/Tracy/Desktop/lock.png">
+      <img src="images/lock.png">
       <h4> Secure </h4>
       <p> Rest assured that your sensitive information is supplied once, and kept within an encrypted server. Input your information one time, and Leasetogether takes care of the rest. ETC  ETC</p>
     </div>
     <div class="feature-block">
-      <img src="/Users/Tracy/Desktop/wing.png">
+      <img src="images/wing.png">
       <h4> Fast </h4>
       <p>Streamlining the dreaded leasing process for you is our goal. Leasetogether provides quick access and ability to edit all required documents. ETC ETC</p>
     </div>
     <div class="feature-block">
-      <img src="/Users/Tracy/Desktop/thumbsup.png">
+      <img src="images/thumbsup.png">
       <h4> Simple </h4>
       <p>Sign up, upload your documents, fill in your information, and you're done! Your lease paperwork will be on its way. No hassle, just easy leasing. ETC</p>
     </div>
@@ -118,7 +114,7 @@
     <div class="feature-block-2">    
     <h2> Receive updates on whose paperwork is unfinished </h2>
         <p> See everyone's lease paperwork at once </p>  
-            <img src="/Users/Tracy/Desktop/timeline.png">
+            <img src="images/timeline.png">
     </div>
     <div class="feature-block-3">  
        <div class="feature-block-0-1">
@@ -126,7 +122,7 @@
                 <p> Store your documents safely online </p>
         </div>
         <div class="feature-block-0-2">
-            <img src="/Users/Tracy/Desktop/paperwork.png">
+            <img src="images/paperwork.png">
         </div>
     </div>
     
@@ -159,7 +155,7 @@
     text-align: center;
 }
 
-body { background-image:url(/Users/Tracy/Desktop/background.jpg); }
+body { background-image:url(images/background.jpg); }
       
 .feature-block img {
     width:60px;
@@ -235,6 +231,21 @@ body { background-image:url(/Users/Tracy/Desktop/background.jpg); }
 }
 </style>
 
+<!-- the #row-of-features div acts as a container row, while the .feature-block 's act as items in the row
+  display:flex                      // turns on the flexbox functionality
+  flex-direction: row              // indicates this is horizontal container, not vertical
+  justify-content: space-around    // spaces out the items inside the flexbox
+  flex-wrap: wrap                  // allows items to be put on additional rows when the first row isn't long enough
+  in .feature-block, there are some things that can be changed. 
+  i set the width to 25%. this relates to its direct parent, #row-of-features, which is set to 100% width of the browser
+  - the 25% does include the padding
+  
+  since it's % based, it could potentially be super wide or super narrow. so we can use a min-width and max-width to prevent that.
+  it works really well.
+ -->
+
+
+    
 <!--  	<div id="row-3"></div>
  	<div id="row-4">
 		<div id="green"></div>
