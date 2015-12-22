@@ -1,0 +1,59 @@
+.css-carousel {
+	height: 100px;
+}
+
+.carousel-quote {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	opacity: 0;
+	text-align: center;
+	font-size: 2rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-style: italic;
+
+	-webkit-animation: css-carousel-fade 20s linear infinite;
+	-moz-animation: css-carousel-fade 20s linear infinite;
+	-ms-animation: css-carousel-fade 20s linear infinite;
+	animation: css-carousel-fade 20s linear infinite;
+}
+
+.css-carousel .carousel-quote:nth-child(2) {
+	-webkit-animation-delay: 5s;
+	-moz-animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	animation-delay: 5s;
+}
+.css-carousel .carousel-quote:nth-child(3) {
+	-webkit-animation-delay: 10s;
+	-moz-animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	animation-delay: 10s;
+}
+.css-carousel .carousel-quote:nth-child(4) {
+	-webkit-animation-delay: 15s;
+	-moz-animation-delay: 15s;
+	-ms-animation-delay: 15s;
+	animation-delay: 15s;
+}
+
+
+@-webkit-keyframes css-carousel-fade {
+	0%, 51.5%, 100% { opacity: 0; }
+	2%, 49.5% { opacity: 1;}
+}
+@-moz-keyframes css-carousel-fade {
+	0%, 51.5%, 100% { opacity: 0; }
+	2%, 49.5% { opacity: 1;}
+}
+@-ms-keyframes css-carousel-fade {
+	0%, 51.5%, 100% { opacity: 0; }
+	2%, 49.5% { opacity: 1;}
+}
+@keyframes css-carousel-fade {
+	0%, 51.5%, 100% { opacity: 0; }
+	2%, 49.5% { opacity: 1;}
+}
