@@ -4,15 +4,12 @@
 	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="shortcut icon" href="favicon.ico">
-    
-    <!-- BOOTSTRAP ETC [didn't use flex] -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- END BOOTSTRAP DUMP-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="viewport" content="height=device-height, width=device-width, user-scalable=no">
+
 
 </head>
+
 <body>
   <div id="container">
   	<div id="row-1">
@@ -88,9 +85,6 @@
 	</div>
  </div>
     
-<!--    Here ends a row of features w/ icons   
-  and now I will show you how to do the same thing with flexbox. no javascript, just a few lines of CSS
-  -->
 
   <div id="row-of-features">
     <div class="feature-block">
@@ -237,21 +231,6 @@ body { background-image:url(/Users/Tracy/Desktop/background.jpg); }
 }
 </style>
 
-<!-- the #row-of-features div acts as a container row, while the .feature-block 's act as items in the row
-  display:flex                      // turns on the flexbox functionality
-  flex-direction: row              // indicates this is horizontal container, not vertical
-  justify-content: space-around    // spaces out the items inside the flexbox
-  flex-wrap: wrap                  // allows items to be put on additional rows when the first row isn't long enough
-  in .feature-block, there are some things that can be changed. 
-  i set the width to 25%. this relates to its direct parent, #row-of-features, which is set to 100% width of the browser
-  - the 25% does include the padding
-  
-  since it's % based, it could potentially be super wide or super narrow. so we can use a min-width and max-width to prevent that.
-  it works really well.
- -->
-
-
-    
 <!--  	<div id="row-3"></div>
  	<div id="row-4">
 		<div id="green"></div>
