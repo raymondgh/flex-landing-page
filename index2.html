@@ -1,11 +1,25 @@
-<head>
+d>
 	<link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
 	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- THIS CONTROLS THE SLIDESHOW AT THE BOTTOM -->    
+<script>
+    $("#slideshow > div:gt(0)").hide();
 
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);
+    </script>
+<!-- END OF SLIDESHOW CONTROL -->
 </head>
 <body>
   <div id="container">
@@ -85,27 +99,32 @@
 <!--    Here ends a row of features w/ icons   
   and now I will show you how to do the same thing with flexbox. no javascript, just a few lines of CSS
   -->
-
-  <div id="row-of-features">
+<!--
+<div id="blackbar">
+    <h1> Leasetogether</h1>
+</div>
+-->
+    
+<div id="row-of-features">
     <div class="feature-block">
       <img src="images/paperless.png">
       <h4>Paperless</h4>
-      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. ETC</p>
+      <p>Protect the environment. Eliminate piles of lease paperwork by opting into Leasetogether. Compile all important documents into one file and then click print. We print once, so you can worry less. </p>
     </div>
     <div class="feature-block">
       <img src="images/lock.png">
       <h4> Secure </h4>
-      <p> Rest assured that your sensitive information is supplied once, and kept within an encrypted server. Input your information one time, and Leasetogether takes care of the rest. ETC  ETC</p>
+      <p> Rest assured that your sensitive information is supplied once, and kept within an encrypted server. Input your information one time, and Leasetogether takes care of the rest. </p>
     </div>
     <div class="feature-block">
       <img src="images/wing.png">
       <h4> Fast </h4>
-      <p>Streamlining the dreaded leasing process for you is our goal. Leasetogether provides quick access and ability to edit all required documents. ETC ETC</p>
+      <p>Streamlining the dreaded leasing process for you is our goal. Leasetogether provides quick access and ability to edit all required documents. </p>
     </div>
     <div class="feature-block">
       <img src="images/thumbsup.png">
       <h4> Simple </h4>
-      <p>Sign up, upload your documents, fill in your information, and you're done! Your lease paperwork will be on its way. No hassle, just easy leasing. ETC</p>
+      <p>Sign up, upload your documents, fill in your information, and you're done! Your lease paperwork will be on its way. No hassle, just easy leasing.</p>
     </div>
 </div>
     
@@ -113,7 +132,7 @@
 <div id="row-of-features-2">
     <div class="feature-block-2">    
     <h2> Receive updates on whose paperwork is unfinished </h2>
-        <p> See everyone's lease paperwork at once </p>  
+        <p> Stay organized and on-track with your co-lessees </p>  
             <img src="images/timeline.png">
     </div>
     <div class="feature-block-3">  
@@ -125,22 +144,54 @@
             <img src="images/paperwork.png">
         </div>
     </div>
-    
+ <div id="row-of-features-3">   
     <div class="feature-block-4">
-        <h2> standard carousel - testimonial space -</h2>
-            <h3> "We just LOVE Leasetogether. OMG it's legititmately awesome." </h3>
-    </div>  
+        <div id="slideshow">
+            <div>
+                <h1> "This is an awesome service." -Man </h1>
+            </div>
+            <div>
+                <h1> "This is a legitimate service." -Woman </h1>
+            </div>
+            <div>
+                <h1> "This is a legitimately awesome service." -Ray </h1>
+            </div>
+        </div>  
+    </div>
 </div>
 
 <!-- here's that flexbox stylin' -->
-<style>     
+<style>
+    
+#slideshow { 
+    position: relative; 
+    width: 780px; 
+    height: 300px; 
+    padding: 10px; 
+    box-shadow: 3px 3px 7px #888888; 
+    background-color:white;
+}
+
+#slideshow h1 {
+    padding-top:100px;
+    text-align:center;
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
 .feature-block-0-1 {
     width: 50%;
     text-align: center;
     padding-top:90px;
     padding-left:20px;
 }
-      
+    
 .feature-block-0-1 p {
     color:grey;
     font-size:20px;
@@ -148,8 +199,7 @@
 .feature-block-0-1 h2 {
     color:#0ec9e3;
 }     
-          
-      
+               
 .feature-block-0-2 {
     width: 50%;
     text-align: center;
@@ -165,7 +215,7 @@ body { background-image:url(images/background.jpg); }
     color:#06869d;
 }
 .feature-block-2 h2 {
-    padding:20px;
+    padding-top:20px;
 }
 .feature-block-2 p {
     color:grey;
@@ -187,8 +237,17 @@ body { background-image:url(images/background.jpg); }
     flex-wrap: wrap;
     width: 100%;
 }
+#row-of-features-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom:30px;
+}
 .feature-block {
-    width: 25%;
+    width: 20%;
     min-width: 150px;
     max-width: 360px;
     text-align: center;
@@ -218,17 +277,7 @@ body { background-image:url(images/background.jpg); }
     box-shadow: 3px 3px 7px #888888;
     background-color:white;
 }
-.feature-block-4 {
-    width: 100%;
-    min-width: 180px;
-    max-width: 800px;
-    min-height: 200px;
-    max-height: 600px;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 3px 3px 7px #888888;
-    background-color:white;
-}
+
 </style>
 
 <!-- the #row-of-features div acts as a container row, while the .feature-block 's act as items in the row
