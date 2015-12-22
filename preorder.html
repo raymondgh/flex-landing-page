@@ -1,32 +1,140 @@
 
 <head>
-	<link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
-	<title>Leasetogether - Apartment Rental Applications Made Easy.</title>
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+  <title>Leasetogether - Apartment Rental Applications Made Easy.</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico">
     <meta name="viewport" content="height=device-height, width=device-width, user-scalable=no">
 
 </head>
 <body>
   <div id="container">
-  	<div id="row-1">
-  		<div id="header-left">
-  			<div id="header-logo"><img src="images/logo.png" style="width:30px;height:auto"></div>
-  			<div id="header-name">Leasetogether</div>
-  			<div id="header-slogan">The easiest way to apply for an apartment lease.</div>
-  		</div>
-  		<div id="header-right"><a href="https://twitter.com/leasetogether" target="_blank">Twitter</a></div>
-  	</div>
-  	<div id="row-2">
-  		
-  	</div>
+    <div id="row-1">
+      <div id="header-left">
+        <div id="header-logo"><img src="images/logo.png" style="width:30px;height:auto"></div>
+        <div id="header-name">Leasetogether</div>
+        <div id="header-slogan">The easiest way to apply for an apartment lease.</div>
+      </div>
+      <div id="header-right"><a href="https://twitter.com/leasetogether" target="_blank">Twitter</a></div>
+    </div>
+    
+    <div id="preorder-body">
+      <div id="preorder-body-content">
+        <div id="title"></div>
+        <div id="discount">
 
-			
-		</div>
-	</div>
+        </div>
+        <div id="selling-points">
+
+        </div>
+        <div id="buttons">
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
  </div>
-</body>
 
-<!-- be sure to read style.css and look at #container, #row-1, #header-left, #header-right, and #row-2 -->
+<style>
+
+#container {
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+  width:100%;
+  height:100vh;
+}
+
+#row-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  color: #aaa;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border-bottom: 1px solid #0ec9e3;
+
+}
+
+#header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+}
+
+#header-logo {
+  align-self: center;
+}
+#header-name {
+  color: #0ec9e3;
+  font-size: 1.25rem;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+#header-slogan {
+  font-style:italic;
+  font-size:0.9rem;
+}
+
+#header-right {
+}
+
+#preorder-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url(images/boston.jpg) top center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+#preorder-body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45%;
+  width: 45%;
+  background-color:green;
+}
+#title {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#discount {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+}
+#selling-points {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+#buttons {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+
+}
+</style>
+
+</body>
