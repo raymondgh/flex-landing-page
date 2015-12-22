@@ -19,13 +19,22 @@
       </div>
       <div id="header-right"><a href="https://twitter.com/leasetogether" target="_blank">Twitter</a></div>
     </div>
-    <div id="row-2">
-      
+    
+    <div id="preorder-body">
+      <div id="preorder-body-content">
+        <div id="title"></div>
+        <div id="discount">
+
+        </div>
+        <div id="selling-points">
+
+        </div>
+        <div id="buttons">
+
+        </div>
 
 
-
-
-
+      </div>
     </div>
   </div>
  </div>
@@ -78,16 +87,54 @@
 #header-right {
 }
 
-#row-2 {
+#preorder-body {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background: url(images/boston.jpg) top center;
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
+#preorder-body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45%;
+  width: 45%;
+  background-color:green;
+}
+#title {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
+#discount {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+}
+#selling-points {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+#buttons {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 50px;
+  width: 50px;
 
+}
 </style>
+
 </body>
