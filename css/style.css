@@ -9,8 +9,8 @@ body {
 #container {
 	display: flex;
 	flex-direction: column;
-background-image:url(images/background.jpg); 
-background-repeat: repeat;
+	background-image:url(images/background.jpg); 
+	background-repeat: repeat;
 	width:100%;
 	align-items: center;
 }
