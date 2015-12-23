@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> 
-</head>
-<body>
-<!-- BUTTON -->
-<div style="position:relative; top:3px;">
-    <form action="" method="POST">
-        <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_3Se0j3KPXiIvfRN1Y1Rm9vM0"
-                data-amount="2000"`
-                data-name="Leasetogether"
-                data-description="Remove unwanted offspring ($20.00)"
-                //data-allow-remember-me="false" //remember me option is weird and confusing. hidden from view
-                data-image="https://stripe.com/img/documentation/checkout/marketplace.png">
-        </script>
-    </form>
-</div>
-<!-- END BUTTON -->
-</body>
-</html>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<button id="customButton">Purchase</button>
 
+<script>
+  var handler = StripeCheckout.configure({
+    key: '',
+    image: '/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token) {
+      console.log(token.id)
+      $.post('payment/', {stripeToken: token.id})
+    }
+  });
+
+  $('#customButton').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Leasetogether.com',
+      description: 'The easiest way to apply for housing',
+      amount: 2500
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
