@@ -108,6 +108,7 @@ input, textarea {
 	flex-direction: column;
 	align-items: center;
 	height: 25%;
+	width: 85vw;
 }
 
 #title {
@@ -139,25 +140,27 @@ input, textarea {
 
 .step {
 	display:flex;
+	flex-direction: row;
 	width: 100%;
 	flex-shrink: 1;
 	align-items: center;
 	background-color: hsla(180, 0%, 100%, 0.9);
 	border-radius: 5px;
-		margin-top: 10px;
-	margin-bottom: 10px;
+		margin-top: 5px;
+	margin-bottom: 5px;
 
 	justify-content: space-around;
 	-webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 5px 4px 5px 0px rgba(0,0,0,0.75);
-	padding: 2px;
+	padding-top: .2rem;
+	padding-bottom: .2rem;
 }
 
 .step-text {
 	display:flex;
 	flex-direction:column;
-	width: 320px;
+	width: 280px;
 }
 
 .step-image img {
@@ -178,6 +181,7 @@ input, textarea {
 #mc_embed_signup {
 	display: flex;
 	width: 100%;
+	max-width: 545px;
 	margin: 0%;
 	height: 30%;
 }
@@ -329,6 +333,10 @@ form {
 
 #row-screenshot img {
   padding: 15px;
+}
+
+#screenshot-img {
+	flex: 0 1 440px;
 }
 
 /*
