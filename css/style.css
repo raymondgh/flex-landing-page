@@ -218,10 +218,8 @@ input, textarea {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 570px;
 	height: 100px;
-/*	border: 1px solid #aaa;
-*/	border-radius: 5px;
+	border-radius: 5px;
 }
 
 form {

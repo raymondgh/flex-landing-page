@@ -1,91 +1,94 @@
-
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
-  <title>Leasetogether - Apartment Rental Applications Made Easy.</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+    <title>Leasetogether - Apartment Rental Applications Made Easy.</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <meta name="viewport" content="height=device-height, width=device-width, user-scalable=no">
-
-</head>
-<body>
-  <div id="container">
-    <div id="row-1">
-      <div id="header-left">
-        <div id="header-logo"><img src="images/logo.png" style="width:30px;height:auto"></div>
-        <div id="header-name">Leasetogether</div>
-        <div id="header-slogan">The easiest way to apply for an apartment lease.</div>
+    <meta name="viewport" content="width=device-width, height=device-height user-scalable=no">
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71703723-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <div id="container">
+      <div id="above-the-fold">
+        <div id="row-2">
+          <div id="row-1">
+            <div></div>
+            <div id="header-left">
+              <img id="header-logo" src="images/logo.png">
+              <div id="header-name">Leasetogether</div>      
+            </div>
+            <div id="header-right">
+              <a href="https://twitter.com/leasetogether" target="_blank"><img src="images/twitter.png"></a></div>
+            </div>  
+            <div id="preorder-body">
+              <div id="preorder-body-content">
+                <div id="preorder-title">
+                  <h1>Preorder Now!</h1>
+                </div>
+                <div id="preorder-subtitle">
+                  <h2>A great gift for graduates</h2>
+                </div>
+                <div id="preorder-benefits">
+                  <ul>
+                    <li>Unlimited Digital Downloads</li>
+                    <li>Unlimited Roommates</li>
+                    <li>Paper Applications Overnighted at $29 each</li>
+                  </ul>
+                </div>
+                <div id="preorder-price">
+                  <h2><del>$19</del> $9 One-time</h2>
+                </div>
+                <div id="preorder-checkout">
+                  <button id="customButton">Purchase</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="header-right"><a href="https://twitter.com/leasetogether" target="_blank">Twitter</a></div>
     </div>
-    
-    <div id="preorder-body">
-      <div id="preorder-body-content">
-        <div id="title"></div>
-        <div id="discount">
-
-        </div>
-        <div id="selling-points">
-
-        </div>
-        <div id="buttons">
-
-        </div>
-
-
-      </div>
-    </div>
-  </div>
- </div>
 
 <style>
 
-#container {
-  display: flex;
-  flex-direction: column;
-  background-color:white;
+#preorder-title {
   width:100%;
-  height:100vh;
+  background-color:pink;
 }
 
-#row-1 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 50px;
-  color: #aaa;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #fff;
-  border-bottom: 1px solid #0ec9e3;
-
+#preorder-subtitle {
+  width:100%;
+  background-color:red;
 }
 
-#header-left {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-
+#preorder-benefits {
+  width:100%;
+  background-color:maroon;
 }
 
-#header-logo {
-  align-self: center;
-}
-#header-name {
-  color: #0ec9e3;
-  font-size: 1.25rem;
-  padding-right: 8px;
-  padding-left: 8px;
+#preorder-price {
+  width:100%;
+  background-color:purple;
 }
 
-#header-slogan {
-  font-style:italic;
-  font-size:0.9rem;
+#preorder-checkout {
+  width:100%;
+  background-color:orange;
 }
 
-#header-right {
-}
+
 
 #preorder-body {
   display: flex;
@@ -100,41 +103,42 @@
 #preorder-body-content {
   display: flex;
   flex-direction: column;
+  flex: 0 1 700px;
   align-items: center;
   justify-content: center;
-  height: 45%;
-  width: 45%;
+
   background-color:green;
 }
-#title {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  height: 50px;
-  width: 50px;
-}
-#discount {
-  display: flex;
-  flex-direction: row;
-  background-color: blue;
-  height: 50px;
-  width: 50px;
-}
-#selling-points {
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  height: 50px;
-  width: 50px;
-}
-#buttons {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  height: 50px;
-  width: 50px;
 
-}
 </style>
 
+
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: '',
+    image: '/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token) {
+      console.log(token.id)
+      $.post('payment/', {stripeToken: token.id})
+    }
+  });
+
+  $('#customButton').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Leasetogether.com',
+      description: 'The easiest way to apply for housing',
+      amount: 2500
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
 </body>
+</html>
