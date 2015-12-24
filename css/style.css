@@ -45,8 +45,8 @@ body {
   align-self: center;
   max-width: 4vh;
   max-height: auto;
-  min-width: 30px;
-  min-height: auto;
+  width: 30px;
+  height: 30px;
 }
 
 #header-name {
