@@ -22,7 +22,9 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	height: 80px;
+/*	height: 50px;
+*/	max-height: 7vh;
+	min-height: 50px;
 	color: #aaa;
 	align-items: center;
 	justify-content: space-around;
@@ -34,18 +36,22 @@ body {
 #header-left {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	align-items: baseline;
+	align-self: center;
 
 }
 
 #header-logo {
   align-self: center;
+  max-width: 4vh;
+  max-height: auto;
+  min-width: 30px;
+  min-height: auto;
 }
 
 #header-name {
 	color: #0ec9e3;
-	font-size: 2.5rem;
+	font-size: 150%;
 	margin: 8px;
 }
 
@@ -55,7 +61,14 @@ body {
 }
 
 #header-right {
+	align-self: center;
+}
 
+#header-right img {
+	max-width: 4vh;
+  max-height: auto
+  min-width: 30px;
+  max-width: auto;
 }
 
 
