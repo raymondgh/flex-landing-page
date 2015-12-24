@@ -28,31 +28,31 @@
             <div></div>
             <div id="header-left">
               <img id="header-logo" src="images/logo.png">
-              <div id="header-name">Leasetogether</div>      
+              <div id="header-name"><a href="index.html">Leasetogether</a></div>      
             </div>
             <div id="header-right">
               <a href="https://twitter.com/leasetogether" target="_blank"><img src="images/twitter.png"></a></div>
             </div>  
-            <div id="preorder-body">
+            <div id="below-header">
               <div id="preorder-body-content">
                 <div id="preorder-title">
-                  <h1>Preorder Now!</h1>
+                  <h1>Early Supporter Preorder</h1>
                 </div>
                 <div id="preorder-subtitle">
-                  <h2>A great gift for graduates</h2>
+                  <h3>A great gift for graduates</h3>
                 </div>
                 <div id="preorder-benefits">
-                  <ul>
-                    <li>Unlimited Digital Downloads</li>
-                    <li>Unlimited Roommates</li>
+                  <ul id="preorder-benefits-list">
+                    <li>Unlimited Application PDF Downloads</li>
+                    <li>Unlimited Roommate Invitations</li>
                     <li>Paper Applications Overnighted at $29 each</li>
                   </ul>
                 </div>
                 <div id="preorder-price">
-                  <h2><del>$19</del> $9 One-time</h2>
+                  <div id="current-price"><h2><del>$19</del> $9<span style="font-size:.9em">one time</span></h2></div>
                 </div>
                 <div id="preorder-checkout">
-                  <button id="customButton">Purchase</button>
+                  <button id="customButton">Buy Now</button>
                 </div>
               </div>
             </div>
@@ -65,49 +65,87 @@
 
 #preorder-title {
   width:100%;
-  background-color:pink;
+  color:#fff;
+  font-family: josefin sans;
+  background-color:#2e404d;
+  text-transform: uppercase;
+  text-align: center;
 }
+
+#preorder-title h1 {
+/*  margin: 0px ;
+*/}
 
 #preorder-subtitle {
   width:100%;
-  background-color:red;
+  text-align: center;
+  color: #3b515f;
+  border-bottom: 1px solid #d5d3cd;
+
 }
+
+#preorder-subtitle h3 {
+/*  margin: 0px;
+*/}
 
 #preorder-benefits {
   width:100%;
-  background-color:maroon;
+  color: #797979;
+  background-color:#f6f6f2;
+}
+
+#preorder-benefits-list {
+  list-style: none inside none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#preorder-benefits-list li {
+  border-bottom: 1px solid #d5d3cd;
+  padding: 0.9em 2em 0.9em 2em;
 }
 
 #preorder-price {
   width:100%;
-  background-color:purple;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #3b515f;
+  /*background-color:#2e404d;*/
+  text-align: center;
+/*  text-transform: uppercase;
+*/  font-variant: small-caps;
 }
+
 
 #preorder-checkout {
   width:100%;
-  background-color:orange;
+  background-color:#f6f6f2;
+  text-align: center;
 }
 
 
 
-#preorder-body {
+
+
+#below-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: url(images/boston.jpg) top center;
-  background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 #preorder-body-content {
   display: flex;
   flex-direction: column;
-  flex: 0 1 700px;
+  flex: 0 1 600px;
   align-items: center;
   justify-content: center;
-
-  background-color:green;
+  border: 1px solid #d5d3cd;
+  background-color: #87a1b1;
 }
 
 </style>
