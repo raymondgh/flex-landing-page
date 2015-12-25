@@ -1,27 +1,19 @@
-import os
 from flask import Flask, render_template, request
+import os
 import stripe
-import logging, sys
+import logging
+import sys
 import json
 import config
 
-logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
-
-trans_log = logging.getLogger('trans_logger')
-
-trans_handler = logging.FileHandler('trans.log')
-trans_handler.setLevel(logging.INFO)
-trans_log.addHandler(trans_handler)
-
-stripe.api_key = config.StripeConfig.TEST_STRIPE_SECRET_KEY
-
 app = Flask(__name__)
+logging.basicConfig(filename='payment.log', level=logging.DEBUG)
 
 @app.route('/', methods=['POST'])
 def charge():
 
+    stripe.api_key = config.StripeConfig.TEST_STRIPE_SECRET_KEY
     token = request.form['stripeToken']
-    purchase_pref = request.form['purchasePref']
 
     try:
         charge = stripe.Charge.create(
@@ -30,13 +22,14 @@ def charge():
             source=token,
             description="Leasetogether Preorder"
         )
+
+        purchase_pref = request.form['purchasePref']
+        logging.info("Purchase Pref: %s, %s", token, purchase_pref)
         return "success"
     except stripe.error.CardError, e:
         # The card has been declined
         pass
 
-    trans_log.info(str(token) + ", " + str(purchase_pref))
-
-
 if __name__ == '__main__':
+
     app.run(debug=True)
