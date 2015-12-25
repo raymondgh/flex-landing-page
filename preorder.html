@@ -168,7 +168,6 @@
       image: '/img/documentation/checkout/marketplace.png',
       locale: 'auto',
       token: function(token) {
-        console.log(token.id)
         $.post('payment/', {stripeToken: token.id})
       }
     });
