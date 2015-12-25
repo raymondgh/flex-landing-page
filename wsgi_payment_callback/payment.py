@@ -3,15 +3,11 @@ from flask import Flask, render_template, request
 import stripe
 import logging, sys
 import json
+import config
 
 logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
-stripe_keys = {
-    'secret_key': '',
-    'publishable_key': ''
-}
-
-stripe.api_key = stripe_keys['secret_key']
+stripe.api_key = config.StripeConfig.TEST_STRIPE_SECRET_KEY
 
 app = Flask(__name__)
 
@@ -21,10 +17,10 @@ def charge():
     token = request.form['stripeToken']
     try:
         charge = stripe.Charge.create(
-            amount=2500,
+            amount=2900,
             currency="usd",
             source=token,
-            description="Leasetogether preorder"
+            description="Leasetogether Preorder"
         )
         return "success"
     except stripe.error.CardError, e:

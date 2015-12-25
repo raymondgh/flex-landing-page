@@ -1,5 +1,35 @@
 <html>
 <head>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script>
+    var handler = StripeCheckout.configure({
+      key: '',
+      image: '/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        console.log(token.id)
+        $.post('payment/', {stripeToken: token.id})
+      }
+    });
+
+    $('#purchaseButton').on('click', function(e) {
+      // Open Checkout with further options
+      handler.open({
+        name: 'Leasetogether.com',
+        description: 'The easiest way to apply for housing',
+        amount: 2900
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+  </script>
+
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
   <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
@@ -54,7 +84,7 @@
                 <div id="current-price"><h2><del>$19</del> $9<span style="font-size:.9em">one time</span></h2></div>
               </div>
               <div id="preorder-checkout">
-                <button id="customButton">Buy Now</button>
+                <button id="purchaseButton">Buy Now</button>
               </div>
             </div>
           </div>
