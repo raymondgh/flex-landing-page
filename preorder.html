@@ -3,33 +3,6 @@
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  <script>
-    var handler = StripeCheckout.configure({
-      key: 'pk_test_3Se0j3KPXiIvfRN1Y1Rm9vM0',
-      image: '/img/documentation/checkout/marketplace.png',
-      locale: 'auto',
-      token: function(token) {
-        console.log(token.id)
-        $.post('payment/', {stripeToken: token.id})
-      }
-    });
-
-    $('#customButton').on('click', function(e) {
-      // Open Checkout with further options
-      handler.open({
-        name: 'Leasetogether.com',
-        description: 'The easiest way to apply for housing',
-        amount: 2900
-      });
-      e.preventDefault();
-    });
-
-    // Close Checkout on page navigation
-    $(window).on('popstate', function() {
-      handler.close();
-    });
-  </script>
-
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
   <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
@@ -84,6 +57,9 @@
               <div id="preorder-checkout">
                 <button id="customButton">Buy Now</button>
               </div>
+              <div id="preorder-purchase-pref">
+                <label><input type="checkbox" id="pdf-checkbox" value="purchase-pref">In the future, I would pay to download my completed application as PDF</label>
+              </div>
             </div>
           </div>
         </div>
@@ -113,17 +89,17 @@
 
 }
 
-#preorder-subtitle h3 {
-/*  margin: 0px;
-*/}
+#pdf-checkbox {
+  -webkit-appearance: checkbox; !important
+}
 
-#preorder-benefits {
+#preorder-benefits, #preorder-purchase-pref {
   width:100%;
   color: #797979;
   background-color:#f6f6f2;
 }
 
-#preorder-benefits-list {
+#preorder-benefits-list, #preorder-purchase-pref {
   list-style: none inside none;
   padding: 0px;
   margin: 0px;
@@ -188,5 +164,30 @@
 }
 
 </style>
+  <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_3Se0j3KPXiIvfRN1Y1Rm9vM0',
+      image: '/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        $.post('payment/', {stripeToken: token.id, purchasePref: $("#pdf-checkbox").prop('checked')})
+      }
+    });
+
+    $('#customButton').on('click', function(e) {
+      // Open Checkout with further options
+      handler.open({
+        name: 'Leasetogether.com',
+        description: 'The easiest way to apply for housing',
+        amount: 2900
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+  </script>
 </body>
 </html>
