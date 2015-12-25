@@ -22,10 +22,8 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-/*	height: 50px;
-*/	max-height: 7vh;
+	max-height: 7vh;
 	min-height: 50px;
-	color: #aaa;
 	align-items: center;
 	justify-content: space-around;
 	background-color: #fff;
@@ -43,12 +41,10 @@ body {
 
 #header-logo {
   align-self: center;
-  max-width: 4vh;
-  max-height: auto;
-  min-width: 30px;
-  min-height: 30px;
-  width: 30px;
-  height: 30px;
+  	max-width: 4vh;
+    min-width: 30px;
+ 	max-height: 4vh;
+    min-height: 30px;
 }
 
 #header-name {
@@ -62,19 +58,20 @@ body {
 	font-size:1.1vw;
 }
 
+#header-blank {
+	width: 100px;
+}
+
 #header-right {
 		display: flex;
 	flex-direction: row;
-	align-self: center;
 	align-items: center;
 }
 
 #header-right img {
-
 	max-width: 4vh;
-  max-height: auto
-  min-width: 30px;
-  max-width: auto;
+	min-width: 30px;
+	height: auto;
 }
 
 
