@@ -3,33 +3,6 @@
   <script src="https://checkout.stripe.com/checkout.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  <script>
-    var handler = StripeCheckout.configure({
-      key: 'pk_test_3Se0j3KPXiIvfRN1Y1Rm9vM0',
-      image: '/img/documentation/checkout/marketplace.png',
-      locale: 'auto',
-      token: function(token) {
-        console.log(token.id)
-        $.post('payment/', {stripeToken: token.id})
-      }
-    });
-
-    $('#customButton').on('click', function(e) {
-      // Open Checkout with further options
-      handler.open({
-        name: 'Leasetogether.com',
-        description: 'The easiest way to apply for housing',
-        amount: 2900
-      });
-      e.preventDefault();
-    });
-
-    // Close Checkout on page navigation
-    $(window).on('popstate', function() {
-      handler.close();
-    });
-  </script>
-
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
   <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
@@ -189,5 +162,31 @@
 }
 
 </style>
+  <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_3Se0j3KPXiIvfRN1Y1Rm9vM0',
+      image: '/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        console.log(token.id)
+        $.post('payment/', {stripeToken: token.id})
+      }
+    });
+
+    $('#customButton').on('click', function(e) {
+      // Open Checkout with further options
+      handler.open({
+        name: 'Leasetogether.com',
+        description: 'The easiest way to apply for housing',
+        amount: 2900
+      });
+      e.preventDefault();
+    });
+
+    // Close Checkout on page navigation
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+  </script>
 </body>
 </html>
