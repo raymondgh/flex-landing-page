@@ -12,7 +12,7 @@ logging.basicConfig(filename='payment.log', level=logging.DEBUG)
 @app.route('/', methods=['POST'])
 def charge():
 
-    stripe.api_key = config.StripeConfig.TEST_STRIPE_SECRET_KEY
+    stripe.api_key = config.StripeConfig.STRIPE_SECRET_KEY
     token = request.form['stripeToken']
 
     try:
