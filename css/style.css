@@ -98,7 +98,6 @@ body {
 #header-name a:hover{color:#0ec9e3}
 
 input, textarea {
-  -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
 
