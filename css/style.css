@@ -41,10 +41,8 @@ body {
 
 #header-logo {
   align-self: center;
-  	max-width: 4vh;
-    min-width: 30px;
- 	max-height: 4vh;
-    min-height: 30px;
+  	width: 30px;
+    height: 30px;
 }
 
 #header-name {
