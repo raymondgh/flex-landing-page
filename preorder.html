@@ -167,7 +167,7 @@
   <script>
     var handler = StripeCheckout.configure({
       key: 'pk_live_zOn9v7b2BQII3NYxpCENGl4W',
-      image: '/img/documentation/checkout/marketplace.png',
+      image: '/images/logo_spaced.png',
       locale: 'auto',
       token: function(token) {
         $.post('payment/', {stripeToken: token.id, purchasePref: $("#pdf-checkbox").prop('checked')})
@@ -178,7 +178,7 @@
       // Open Checkout with further options
       handler.open({
         name: 'Leasetogether.com',
-        description: 'The easiest way to apply for housing',
+        description: 'Leasetogether Preorder',
         amount: 2900
       });
       e.preventDefault();
