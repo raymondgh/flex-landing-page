@@ -7,6 +7,7 @@
   <title>Leasetogether - Apartment Rental Applications Made Easy.</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/preorder_style.css">
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, height=device-height user-scalable=no">
   <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -47,16 +48,18 @@
               </div>
               <div id="preorder-benefits">
                 <ul id="preorder-benefits-list">
-                  <li>Unlimited Application PDF Downloads</li>
                   <li>Unlimited Roommate Invitations</li>
-                  <li>Paper Applications Overnighted at $29 each</li>
+                  <li>Paper Application Overnighted for $29</li>
                 </ul>
               </div>
               <div id="preorder-price">
-                <div id="current-price"><h2><del>$19</del> $9<span style="font-size:.9em">one time</span></h2></div>
+                <div id="current-price"><h2><del>$50</del> $29<span style="font-size:.9em">one time</span></h2></div>
               </div>
               <div id="preorder-checkout">
                 <button id="customButton">Buy Now</button>
+              </div>
+              <div id="preorder-purchase-pref">
+                <label><input type="checkbox" id="pdf-checkbox" value="purchase-pref">In the future, I would pay to download my completed application as PDF</label>
               </div>
             </div>
           </div>
@@ -64,132 +67,5 @@
       </div>
     </div>
   </div>
-
-  <style>
-  #preorder-title {
-    width:100%;
-    color:#fff;
-    font-family: josefin sans;
-    background-color:#2e404d;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  #preorder-title h1 {
-/*  margin: 0px ;
-*/}
-
-#preorder-subtitle {
-  width:100%;
-  text-align: center;
-  color: #3b515f;
-  border-bottom: 1px solid #d5d3cd;
-
-}
-
-#preorder-subtitle h3 {
-/*  margin: 0px;
-*/}
-
-#preorder-benefits {
-  width:100%;
-  color: #797979;
-  background-color:#f6f6f2;
-}
-
-#preorder-benefits-list {
-  list-style: none inside none;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-}
-
-#preorder-benefits-list li {
-  border-bottom: 1px solid #d5d3cd;
-  padding: 0.9em 2em 0.9em 2em;
-}
-
-#preorder-price {
-  width:100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  color: #3b515f;
-  /*background-color:#2e404d;*/
-  text-align: center;
-/*  text-transform: uppercase;
-*/  font-variant: small-caps;
-}
-
-
-#preorder-checkout {
-  width:100%;
-  background-color:#f6f6f2;
-  text-align: center;
-}
-
-
-
-#subscribe-instruction {
-  background-color: hsla(48, 24%, 98%, 1);
-  border: 1px solid #f0c36d;
-  border-radius: 1px;
-  padding: 8px;
-  font-family: arial;
-  font-weight: 600;
-  font-size: .7em;
-}
-
-
-#below-header {
-  display: flex;
-  flex: 1 0 20%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-#preorder-body-content {
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 600px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #d5d3cd;
-  background-color: #87a1b1;
-}
-
-</style>
-
-
-
-<script>
-var handler = StripeCheckout.configure({
-  key: '',
-  image: '/img/documentation/checkout/marketplace.png',
-  locale: 'auto',
-  token: function(token) {
-    console.log(token.id)
-    $.post('payment/', {stripeToken: token.id})
-  }
-});
-
-$('#customButton').on('click', function(e) {
-    // Open Checkout with further options
-    handler.open({
-      name: 'Leasetogether.com',
-      description: 'The easiest way to apply for housing',
-      amount: 2500
-    });
-    e.preventDefault();
-  });
-
-  // Close Checkout on page navigation
-  $(window).on('popstate', function() {
-    handler.close();
-  });
-  </script>
 </body>
 </html>
