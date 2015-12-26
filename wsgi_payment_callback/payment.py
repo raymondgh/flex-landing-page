@@ -1,9 +1,6 @@
 from flask import Flask, render_template, request, redirect
-import os
 import stripe
 import logging
-import sys
-import json
 import config
 
 app = Flask(__name__)
@@ -25,7 +22,7 @@ def charge():
 
         purchase_pref = request.form['purchasePref']
         logging.info("Purchase Pref: %s, %s", token, purchase_pref)
-        return redirect('https://leasetogether.com/success.html')
+        return "success"
     except stripe.error.CardError, e:
         # The card has been declined
         pass

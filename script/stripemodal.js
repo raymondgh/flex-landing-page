@@ -3,7 +3,11 @@ var handler = StripeCheckout.configure({
   image: '/images/logo_spaced.png',
   locale: 'auto',
   token: function(token) {
-    $.post('payment/', {stripeToken: token.id, purchasePref: $("#pdf-checkbox").prop('checked')})
+    $.post(
+            'payment/',
+            {stripeToken: token.id, purchasePref: $("#pdf-checkbox").prop('checked')},
+            function(){ window.location.replace('/success.html') }
+          )
   }
 });
 
