@@ -22,7 +22,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	max-height: 7vh;
+	height: 7vh;
 	min-height: 50px;
 	align-items: center;
 	justify-content: space-around;
@@ -34,22 +34,39 @@ body {
 #header-left {
 	display: flex;
 	flex-direction: row;
-	align-items: baseline;
+	align-items: center;
 /*	flex: 1 0 50%;
 */	justify-content: center;
 }
 
 #header-logo {
   align-self: center;
-  	width: 30px;
-    height: 30px;
+   	max-width: 4vh;
+    min-width: 32px;
+ 	max-height: 4vh;
+    min-height: 32px;
 }
 
-#header-name {
+
+ @media screen and (orientation:portrait) { 
+ #header-name {
 	color: #0ec9e3;
-	font-size: 150%;
+	font-size: 3vmax;
 	margin-left: 8px;
-}
+} }
+ @media screen and (orientation:landscape) { 
+ #header-name {
+	color: #0ec9e3;
+	font-size: 2vmax;
+	margin-left: 8px;
+} }
+
+
+/*#header-name {
+	color: #0ec9e3;
+	font-size: 3vmax;
+	margin-left: 8px;
+}*/
 
 #header-slogan {
 	font-style:italic;
@@ -67,10 +84,16 @@ body {
 */	align-items: center;
 }
 
-#header-right img {
-	max-width: 4vh;
-	min-width: 30px;
-	height: auto;
+.header-icon  {
+	max-height: 4vh;
+	min-height: 30px;
+	width: auto;
+}
+
+.header-icon  img {
+	max-height: 3vh;
+	min-height: 32px;
+	width: auto;
 }
 
 
