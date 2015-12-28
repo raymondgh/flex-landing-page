@@ -20,8 +20,12 @@ def charge():
             description="Leasetogether Preorder"
         )
 
-        purchase_pref = request.form['purchasePref']
-        logging.info("Purchase Pref: %s, %s", token, purchase_pref)
+        try:
+            purchase_pref = request.form['purchasePref']
+            logging.info("Purchase Pref: %s, %s", token, purchase_pref)
+        except Exception:
+            pass
+
         return "success"
     except stripe.error.CardError, e:
         # The card has been declined
