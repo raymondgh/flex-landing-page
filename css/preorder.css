@@ -8,7 +8,9 @@
   text-align: center;
 }
 
-
+.twitter-share-button {
+  margin: 10px;
+}
 #preorder-title h1 {
   margin-bottom: 8px;
   margin-top: 15px;
